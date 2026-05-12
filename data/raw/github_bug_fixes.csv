@@ -1,0 +1,45 @@
+code,docstring,repo,language,label,source,pr_title,file
+"    A interface to define search problems. The interface will be illustrated using
+        the example of mathematical function.
+            x: the x coordinate of the current search state.
+            y: the y coordinate of the current search state.
+            step_size: size of the step to take when looking for neighbors.
+            function_to_optimize: a function to optimize having the signature f(x, y).
+    implementation of the hill climbling algorithm. We start with a given state, find
+        all its neighbors, move towards the neighbor which provides the maximum (or
+        minimum) change. We keep doing this until we are at a state where we do not
+        have any neighbors which can improve the solution.",,TheAlgorithms/Python,python,1,github_prs,Fixes LGTM issues,searches/hill_climbing.py
+"# Implementing Newton Raphson method in Python
+# Author: Syed Haseeb Shah (github.com/QuantumNovice)
+# The Newton-Raphson method (also known as Newton's method) is a way to
+# quickly find a good approximation for the root of a real-valued function
+from sympy import diff
+from decimal import Decimal
+
+
+def NewtonRaphson(func, a):
+    """""" Finds root from the point 'a' onwards by Newton-Raphson method """"""
+    while True:
+        c = Decimal(a) - (Decimal(eval(func)) / Decimal(eval(str(diff(func)))))
+
+        a = c
+
+        # This number dictates the accuracy of the answer
+        if abs(eval(func)) < 10 ** -15:
+            return c
+
+
+# Let's Execute
+if __name__ == ""__main__"":
+    # Find root of trigonometric function
+    # Find value of pi
+    print(""sin(x) = 0"", NewtonRaphson(""sin(x)"", 2))
+
+    # Find root of polynomial
+    print(""x**2 - 5*x +2 = 0"", NewtonRaphson(""x**2 - 5*x +2"", 0.4))
+
+    # Find Square Root of 5
+    print(""x**2 - 5 = 0"", NewtonRaphson(""x**2 - 5"", 0.1))
+
+    # Exponential Roots
+    print(""exp(x) - 1 = 0"", NewtonRaphson(""exp(x) - 1"", 0))",,TheAlgorithms/Python,python,1,github_prs,Bug Fixed in newton_raphson_method.py,arithmetic_analysis/newton_raphson_method.py
