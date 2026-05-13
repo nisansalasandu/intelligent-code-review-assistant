@@ -43,3 +43,84 @@ if __name__ == ""__main__"":
 
     # Exponential Roots
     print(""exp(x) - 1 = 0"", NewtonRaphson(""exp(x) - 1"", 0))",,TheAlgorithms/Python,python,1,github_prs,Bug Fixed in newton_raphson_method.py,arithmetic_analysis/newton_raphson_method.py
+"    >>> from maths.prime_check import prime_check
+    >>> # all(is_prime_big(i) == prime_check(i) for i in range(1000))  # 3.45s
+    >>> all(is_prime_big(i) == prime_check(i) for i in range(256))",,TheAlgorithms/Python,python,1,github_prs,fix: test failures,maths/miller_rabin.py
+"        self.assertFalse(
+            is_prime(-19),
+            ""Negative numbers are excluded by definition of prime numbers."",
+        )",,TheAlgorithms/Python,python,1,github_prs,fix: test failures,maths/prime_check.py
+"import statistics
+
+
+def mode(input_list):  # Defining function ""mode.""
+    2
+    >>> input_list = [2, 3, 4, 5, 3, 4, 2, 5, 2, 2, 4, 2, 2, 2]
+    >>> mode(input_list) == statistics.mode(input_list)
+    True
+    # Copying input_list to check with the index number later.
+    check_list = input_list.copy()
+        input_list.remove(x)
+        y = max(result)  # Gets the maximum value in the result list.
+        # Returns the value with the maximum number of repetitions.
+        return check_list[result.index(y)]
+    data = [2, 3, 4, 5, 3, 4, 2, 5, 2, 2, 4, 2, 2, 2]
+    print(mode(data))
+    print(statistics.mode(data))",,TheAlgorithms/Python,python,1,github_prs,Mistake in maths/average_mode.py fixed.,maths/average_mode.py
+"
+Basic authentication using an API password is deprecated and will soon no longer work.
+Visit https://developer.github.com/changes/2020-02-14-deprecating-password-auth
+for more information around suggested workarounds and removal dates.
+""""""
+_GITHUB_API = ""https://api.github.com/user""
+def fetch_github_info(auth_user: str, auth_pass: str) -> dict:
+    return requests.get(_GITHUB_API, auth=(auth_user, auth_pass)).json()
+
+
+if __name__ == ""__main__"":
+    for key, value in fetch_github_info(""<USER NAME>"", ""<PASSWORD>"").items():
+        print(f""{key}: {value}"")",,TheAlgorithms/Python,python,1,github_prs,Fixes: #3944 authentication error,web_programming/fetch_github_info.py
+"    A interface to define search problems. The interface will be illustrated using
+        the example of mathematical function.
+            x: the x coordinate of the current search state.
+            y: the y coordinate of the current search state.
+            step_size: size of the step to take when looking for neighbors.
+            function_to_optimize: a function to optimize having the signature f(x, y).
+    implementation of the hill climbling algorithm. We start with a given state, find
+        all its neighbors, move towards the neighbor which provides the maximum (or
+        minimum) change. We keep doing this until we are at a state where we do not
+        have any neighbors which can improve the solution.",,TheAlgorithms/Python,python,1,github_prs,Fixes LGTM issues,searches/hill_climbing.py
+"# Implementing Newton Raphson method in Python
+# Author: Syed Haseeb Shah (github.com/QuantumNovice)
+# The Newton-Raphson method (also known as Newton's method) is a way to
+# quickly find a good approximation for the root of a real-valued function
+from sympy import diff
+from decimal import Decimal
+
+
+def NewtonRaphson(func, a):
+    """""" Finds root from the point 'a' onwards by Newton-Raphson method """"""
+    while True:
+        c = Decimal(a) - (Decimal(eval(func)) / Decimal(eval(str(diff(func)))))
+
+        a = c
+
+        # This number dictates the accuracy of the answer
+        if abs(eval(func)) < 10 ** -15:
+            return c
+
+
+# Let's Execute
+if __name__ == ""__main__"":
+    # Find root of trigonometric function
+    # Find value of pi
+    print(""sin(x) = 0"", NewtonRaphson(""sin(x)"", 2))
+
+    # Find root of polynomial
+    print(""x**2 - 5*x +2 = 0"", NewtonRaphson(""x**2 - 5*x +2"", 0.4))
+
+    # Find Square Root of 5
+    print(""x**2 - 5 = 0"", NewtonRaphson(""x**2 - 5"", 0.1))
+
+    # Exponential Roots
+    print(""exp(x) - 1 = 0"", NewtonRaphson(""exp(x) - 1"", 0))",,TheAlgorithms/Python,python,1,github_prs,Bug Fixed in newton_raphson_method.py,arithmetic_analysis/newton_raphson_method.py

@@ -420138,3 +420138,40 @@ if __name__ == ""__main__"":
 
     # Exponential Roots
     print(""exp(x) - 1 = 0"", NewtonRaphson(""exp(x) - 1"", 0))",,TheAlgorithms/Python,python,1,github_prs,39651,1067,34,157,False
+"    >>> from maths.prime_check import prime_check
+    >>> # all(is_prime_big(i) == prime_check(i) for i in range(1000))  # 3.45s
+    >>> all(is_prime_big(i) == prime_check(i) for i in range(256))",,TheAlgorithms/Python,python,1,github_prs,39652,195,3,24,False
+"        self.assertFalse(
+            is_prime(-19),
+            ""Negative numbers are excluded by definition of prime numbers."",
+        )",,TheAlgorithms/Python,python,1,github_prs,39653,139,4,12,False
+"import statistics
+
+
+def mode(input_list):  # Defining function ""mode.""
+    2
+    >>> input_list = [2, 3, 4, 5, 3, 4, 2, 5, 2, 2, 4, 2, 2, 2]
+    >>> mode(input_list) == statistics.mode(input_list)
+    True
+    # Copying input_list to check with the index number later.
+    check_list = input_list.copy()
+        input_list.remove(x)
+        y = max(result)  # Gets the maximum value in the result list.
+        # Returns the value with the maximum number of repetitions.
+        return check_list[result.index(y)]
+    data = [2, 3, 4, 5, 3, 4, 2, 5, 2, 2, 4, 2, 2, 2]
+    print(mode(data))
+    print(statistics.mode(data))",,TheAlgorithms/Python,python,1,github_prs,39654,639,17,87,False
+"
+Basic authentication using an API password is deprecated and will soon no longer work.
+Visit https://developer.github.com/changes/2020-02-14-deprecating-password-auth
+for more information around suggested workarounds and removal dates.
+""""""
+_GITHUB_API = ""https://api.github.com/user""
+def fetch_github_info(auth_user: str, auth_pass: str) -> dict:
+    return requests.get(_GITHUB_API, auth=(auth_user, auth_pass)).json()
+
+
+if __name__ == ""__main__"":
+    for key, value in fetch_github_info(""<USER NAME>"", ""<PASSWORD>"").items():
+        print(f""{key}: {value}"")",,TheAlgorithms/Python,python,1,github_prs,39655,560,13,53,False
