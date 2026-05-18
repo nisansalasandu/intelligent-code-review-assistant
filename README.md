@@ -269,22 +269,22 @@ python -c "import torch, transformers, streamlit; print('✅ All good')"
 ### requirements.txt
 
 ```
-torch>=2.0.0
-transformers>=4.40.0
-datasets>=2.0.0
-streamlit>=1.28.0
-scikit-learn>=1.0.0
-shap>=0.45.0
-PyGithub>=2.0.0
-matplotlib>=3.7.0
-seaborn>=0.12.0
-pandas>=2.0.0
-numpy>=1.24.0
-safetensors>=0.4.0
-tqdm>=4.65.0
-huggingface-hub>=0.20.0
+torch>=2.11.0
+transformers>=5.8.0
+datasets>=4.8.5
+streamlit>=1.57.0
+scikit-learn>=1.8.0
+shap>=0.51.0
+PyGithub>=2.9.1
+matplotlib>=3.10.9
+seaborn>=0.13.2
+pandas>=2.3.3
+numpy>=2.4.4
+safetensors>=0.7.0
+tqdm>=4.67.3
+huggingface-hub>=1.14.0
 jupyter>=7.0.0
-mlflow>=2.0.0
+mlflow>=3.12.0
 ```
 
 ---
@@ -490,6 +490,6 @@ This project is licensed under the MIT License — see the [LICENSE](LICENSE) fi
 
 **Built as an individual Data Science internship project · 4-week timeline**
 
-*[Your Name] · [Company Name] · [Year]*
+*Nisansala Ruwan Pathirana*
 
 </div>
